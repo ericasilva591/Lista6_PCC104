@@ -4,9 +4,17 @@
 #include <iostream>
 #include <vector>
 
-int FibonacciNum(int n) {
+template <typename T>
+void print_vector(std::vector<T>& v) {//função para imprimir um vetor
+    for (auto i = v.begin(); i != v.end(); i++) {
+        std::cout << *i << " ";
+    }
+    std::cout << std::endl;
+}
 
-    std::vector<int> f;
+
+int FibonacciNum(int n, std::vector<int>& f) {
+        
     f.push_back(1);
     f.push_back(1);
     
@@ -20,10 +28,39 @@ int FibonacciNum(int n) {
 }//Operação Base: Soma
 //C(n) = soma(i=2 to i=n-1)1 = n-1 - 2 +1 = n-2 --> O(n)
 
+int FibonacciMemory(int n) { //economia de memória, armazana somente os dois ultimo números
+
+    int num1 = 1;
+    int num2 = 1;
+    int numaux = 0;
+
+
+    for (int i = 0; i < n - 2; i++) {
+        
+        numaux = num2;
+        num2 = num2 + num1;
+        num1 = numaux;
+
+    }
+
+    return num2;
+
+}//Operação Base: Soma
+//C(n) = soma(i=2 to i=n-1)1 = n-1 - 2 +1 = n-2 --> O(n)
+
 int main()
 {
-    int f = 7;
-    std::cout << FibonacciNum(f);
+    int f = 11;
+    std::vector<int> v;
+
+    std::cout << FibonacciNum(f, v);
+    std::cout << std::endl;
+
+    std::cout << FibonacciMemory(f);
+
+    std::cout << std::endl;
+
+    print_vector(v);
 }
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
