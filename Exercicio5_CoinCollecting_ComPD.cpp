@@ -25,7 +25,8 @@ int CoinCollecting(std::vector<std::vector<int>>& C) {
     return F[m -1][n-1];
 
 }// Operação básica = soma
-//C(n) = 2C(n-1) + 1 = (2^n-1) -1
+//C(n) = Soma(i=1 to i=m-1)Soma(j=1 to j = n-1)1 = Soma(i=1 to i=m-1)(n-1-1+1) = Soma(i=1 to i=m-1)(n-1)
+//soma(i=1 to i=m-1)(n) - soma(i=1 to i=m-1)(1) = n(m-1-1+1) - (m-1-1+1) = n(m-1) - (m-1) .: (n-1)(m-1) --> O(nm)
 
 
 int main()
