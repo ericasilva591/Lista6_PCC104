@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <functional>
 
 template <typename T>
 void print_vector(std::vector<T>& v) {//função para imprimir um vetor
@@ -12,18 +13,13 @@ void print_vector(std::vector<T>& v) {//função para imprimir um vetor
     std::cout << std::endl;
 }
 
-int min(int num1, int num2) {
-    int aux;
-    return aux = (num1 < num2) ? num1 : num2;
-}
-
 int changeMaking(int n, const std::vector<int>& c) {
     std::vector<int> f = { 0 };
     for (int i = 1; i < n + 1; i++) {//i = 1 to i<5
         int temp = 999999;
         int j = 1;
         while ((j <= (c.size() - 1)) && (i >= c[j])) { //i=2 --> 
-            temp = min(f[i - c[j]], temp);
+            temp =std:: min(f[i - c[j]], temp);
             j += 1;
         }
         f.push_back(temp + 1);
