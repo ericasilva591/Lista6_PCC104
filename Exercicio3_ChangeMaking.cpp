@@ -15,25 +15,31 @@ void print_vector(std::vector<T>& v) {//função para imprimir um vetor
 
 int changeMaking(int n, const std::vector<int>& c) {
     std::vector<int> f = { 0 };
-    for (int i = 1; i < n + 1; i++) {//i = 1 to i<5
+    int m = c.size();
+    
+    for (int i = 1; i <= n; i++) {
         int temp = 999999;
         int j = 1;
-        while ((j <= (c.size() - 1)) && (i >= c[j])) { //i=2 --> 
-            temp =std:: min(f[i - c[j]], temp);
+        while ((j < m) && (i >= c[j])) { 
+            temp = std::min(f[i - c[j]], temp);
             j += 1;
+            
         }
         f.push_back(temp + 1);
-
+        
     }
+    
     return f[n];
-}
+}// Operação básica => comparação do min
+//TETA(n) --> faz no mínimo n operações com n sendo valor de troco
+//O(mn) --> soma(i=1 to i=n)soma(j=1 to j=m-1) = soma(i=1 to i=n)(m-1-1+1) = soma(i=1 to i=n)(m-1) = soma(i=1 to i=n)m - soma(i=1 to i=n)1 = m(n-1+1) - (n-1+1) = (m - 1)n
 
 int main()
 {
-    std::vector<int> coins = { 1,5,10,25,50};
-    int n = 65;
+    std::vector<int> coins = {0,1,5,10,25,50};
+    int n = 1010;
 
-    std::cout << changeMaking(n, coins);
+    std::cout <<"Total de moedas no troco: " << changeMaking(n, coins);
 }
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
