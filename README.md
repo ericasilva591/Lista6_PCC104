@@ -2,14 +2,22 @@
 
 PROGRAMAÇÃO DINÂMICA:
 
-Exercicio1_FibonacciSemPD.cpp
+- Exercicio1_FibonacciSemPD.cpp
 
-Exercicio2_FibonacciPD.cpp
+- Exercicio2_FibonacciPD.cpp
 
-Exercicio3_ChangeMaking.cpp
+- Exercicio3_ChangeMaking.cpp
 
-Exercicio4_CoinCollecting_SemPD.cpp
+- Exercicio4_CoinCollecting_SemPD.cpp
 
-Exercicio5_CoinCollecting_ComPD.cpp
+- Exercicio5_CoinCollecting_ComPD.cpp
 
-Exercicio4_Mochila_PD.cpp
+- Exercicio4_Mochila_PD.cpp
+
+BACKTRACKING:
+
+-
+
+BRANCH AND BOUND:
+
+-
