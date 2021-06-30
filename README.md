@@ -21,4 +21,8 @@ BACKTRACKING:
 
 BRANCH AND BOUND:
 
--
+- Exercicio1_TSP_BB.cpp
+
+- Exercicio2_TSP_BB.cpp
+
+
