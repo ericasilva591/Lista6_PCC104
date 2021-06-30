@@ -16,7 +16,8 @@ PROGRAMAÇÃO DINÂMICA:
 
 BACKTRACKING:
 
--
+- Exercicio1_NQueen_BT.cpp
+
 
 BRANCH AND BOUND:
 
