@@ -21,8 +21,8 @@ BACKTRACKING:
 
 BRANCH AND BOUND:
 
-- Exercicio1_TSP_BB.cpp
+- Exercicio1_TSP_BB.cpp - lê um arquivo .csv com uma matriz completa que, necessariamente precisa ter a ultima coluna depois dos dados toda constituida de zeros
 
-- Exercicio2_TSP_BB.cpp
+- Exercicio2_TSP_BB.cpp - lê um arquivo .csv com uma matriz completa simétrica que, necessariamente precisa ter a ultima coluna depois dos dados toda constituida de zeros
 
 
