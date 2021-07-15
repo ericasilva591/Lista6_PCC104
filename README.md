@@ -18,6 +18,10 @@ BACKTRACKING:
 
 - Exercicio1_NQueen_BT.cpp
 
+- Exercicio2_GraphColoring_BT.cpp - Incompleto
+
+- Exercicio3_CicloHamiltoniano_BT.cpp
+
 
 BRANCH AND BOUND:
 
